@@ -11,8 +11,8 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 text-black dark:text-white transition-colors duration-300">
-      <div className="mx-auto max-w-3xl px-4 py-8">
-        <header className="flex items-center justify-between mb-12 h-20">
+      <div className="mx-auto max-w-4xl px-4 py-8">
+        <header className="flex items-center justify-between mb-8 h-16">
           <div className="flex items-center w-12 h-12">
             <Image
               src={logo}
@@ -28,19 +28,23 @@ export default function Home() {
             Trey Dedman
           </h1>
           <p className="text-2xl font-medium text-black dark:text-gray-200">
-            Web Developer
+            Web Developer — Cybersecurity
           </p>
           <p className="text-lg leading-relaxed text-black dark:text-gray-300">
             I enjoy turning ideas into clean, functional experiences. My
             background in cybersecurity taught me how to dig deep into complex
-            problems — now I use that same mindset to build impact-driven
-            applications grounded in purpose, with intuitive, user-first design.
-            I blend logic and creativity, thriving on challenges that push me to
-            grow. Always learning, always improving, and always curious. Let’s
-            build something great together.
+            problems, now I use that same mindset to build impact-driven
+            applications grounded in purpose, with intuitive design. I blend
+            logic and creativity, thriving on challenges that push me to grow.
+          </p>
+          <p className="text-lg leading-relaxed text-black dark:text-gray-300">
+            Always learning, always improving, and always curious.
+          </p>
+          <p className="text-lg leading-relaxed text-black dark:text-gray-300">
+            Let’s connect and explore how we can build something great together.
           </p>
 
-          <div className="flex items-center gap-10 pt-2">
+          <div className="flex items-center gap-10 mt-10 pt-2">
             <Link
               href="./TreyDedman-resume.pdf"
               target="_blank"
@@ -74,7 +78,7 @@ export default function Home() {
             </h2>
 
             <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
-              <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-32 items-center md:items-start">
                 <Image
                   src="/cybear-og.png"
                   alt="CyBear Lock"
@@ -116,6 +120,49 @@ export default function Home() {
                     <Link
                       href="http://ec2-3-142-16-53.us-east-2.compute.amazonaws.com/"
                       className="flex items-center gap-2 text-blue-950 dark:text-teal-300 hover:font-bold mt-2"
+                      target="_blank" // optional: open in new tab
+                      rel="noopener noreferrer"
+                    >
+                      View Project <FaArrowRight />
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-32 items-center md:items-start">
+                <Image
+                  src="/crypto-watchlist-og.png"
+                  alt="Crypto Watchlist"
+                  width={300}
+                  height={0}
+                  style={{ height: "auto" }}
+                  className="rounded-xl"
+                />
+
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                      Crypto Watchlist
+                    </h3>
+                  </div>
+
+                  <p className="text-sm text-gray-900 dark:text-gray-300 leading-relaxed">
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Frontend Project
+                    </span>{" "}
+                    <br />
+                    TypeScript, HTML5, CSS3
+                    <br />
+                    JavaScript DOM manipulation
+                    <br />
+                    CoinCap REST API integration
+                  </p>
+                  <div className="mt-2">
+                    <Link
+                      href="https://treydedman.github.io/Crypto-Watchlist-Project/"
+                      className="flex items-center gap-2 text-blue-500  hover:font-bold mt-2"
                       target="_blank" // optional: open in new tab
                       rel="noopener noreferrer"
                     >
