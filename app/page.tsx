@@ -11,7 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 text-black dark:text-white transition-colors duration-300">
-      <div className="mx-auto max-w-4xl px-4 py-8">
+      <div className="mx-auto max-w-3xl px-4 py-8">
         <header className="flex items-center justify-between mb-8 h-16">
           <div className="flex items-center w-12 h-12">
             <Image
@@ -24,7 +24,7 @@ export default function Home() {
         </header>
 
         <main className="space-y-4">
-          <h1 className="text-6xl font-extrabold leading-tight bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-extrabold leading-tight bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 bg-clip-text text-transparent">
             Trey Dedman
           </h1>
           <p className="text-2xl font-medium text-black dark:text-gray-200">
@@ -77,8 +77,8 @@ export default function Home() {
               Featured Projects
             </h2>
 
-            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
-              <CardContent className="p-6 flex flex-col md:flex-row gap-32 items-center md:items-start">
+            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-3xl mx-auto">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
                 <Image
                   src="/cybear-og.png"
                   alt="CyBear Lock"
@@ -130,8 +130,8 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
-              <CardContent className="p-6 flex flex-col md:flex-row gap-32 items-center md:items-start">
+            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-3xl mx-auto">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
                 <Image
                   src="/crypto-watchlist-og.png"
                   alt="Crypto Watchlist"
