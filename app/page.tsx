@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-neutral-900 text-black dark:text-white transition-colors duration-300">
       <div className="mx-auto max-w-3xl px-4 py-8">
-        
         <header className="flex items-center justify-between mb-12 h-20">
           <div className="flex items-center w-12 h-12">
             <Image
@@ -23,21 +22,30 @@ export default function Home() {
           </div>
           <ThemeToggle />
         </header>
-      
 
-        <main className="space-y-6">
+        <main className="space-y-4">
           <h1 className="text-6xl font-extrabold leading-tight bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 bg-clip-text text-transparent">
             Trey Dedman
           </h1>
-          <p className="text-2xl font-medium text-gray-800 dark:text-gray-200">
+          <p className="text-2xl font-medium text-black dark:text-gray-200">
             Web Developer
           </p>
-          <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          I’m a problem-solver who thrives at the intersection of design and development — where creativity meets logic. I bring ideas to life with thoughtful, scalable solutions and clean, efficient code. Driven by curiosity and a passion for learning, I’m always exploring new ways to build better experiences.
+          <p className="text-lg leading-relaxed text-black dark:text-gray-300">
+            I enjoy turning ideas into clean, functional experiences. My
+            background in cybersecurity taught me how to dig deep into complex
+            problems — now I use that same mindset to build impact-driven
+            applications grounded in purpose, with intuitive, user-first design.
+            I blend logic and creativity, thriving on challenges that push me to
+            grow. Always learning, always improving, and always curious. Let’s
+            build something great together.
           </p>
 
           <div className="flex items-center gap-10 pt-2">
-            <Link href="./TreyDedman-resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="./TreyDedman-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button className="rounded-lg bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 text-white font-semibold transition-transform hover:scale-110">
                 Resume
               </Button>
@@ -61,33 +69,49 @@ export default function Home() {
           </div>
 
           <section className="mt-20 space-y-12">
-          <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
-            Featured Projects
-          </h2>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+              Featured Projects
+            </h2>
 
-          <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
-            <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
-              <Image 
-                src="/cybear-og.png" 
-                alt="CyBear Lock" 
-                width={300}
-                height={0}
-                style={{ height: "auto" }}
-                className="rounded-xl"
-              />
+            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-4xl mx-auto">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
+                <Image
+                  src="/cybear-og.png"
+                  alt="CyBear Lock"
+                  width={300}
+                  height={0}
+                  style={{ height: "auto" }}
+                  className="rounded-xl"
+                />
 
-              <div className="flex-1 space-y-3">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">CyBear Lock</h3>
-                  
-                </div>
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                      CyBear Lock
+                    </h3>
+                  </div>
 
-                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <span className="font-medium text-gray-900 dark:text-gray-100">Frontend:</span> React, TypeScript, Tailwind CSS<br/>
-                  <span className="font-medium text-gray-900 dark:text-gray-100">Backend:</span> Node.js, Express, PostgreSQL<br/>
-                  <span className="font-medium text-gray-900 dark:text-gray-100">Auth:</span> JWT, Argon2<br/>
-                  <span className="font-medium text-gray-900 dark:text-gray-100">Encryption:</span> AES (CryptoJS)
-                </p>
+                  <p className="text-sm text-gray-900 dark:text-gray-300 leading-relaxed">
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Frontend:
+                    </span>{" "}
+                    React, TypeScript, Tailwind CSS
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Backend:
+                    </span>{" "}
+                    Node.js, Express, PostgreSQL
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Auth:
+                    </span>{" "}
+                    JSON Web Tokens (JWT), Argon2
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Encryption:
+                    </span>{" "}
+                    AES (CryptoJS)
+                  </p>
                   <div className="mt-2">
                     <Link
                       href="http://ec2-3-142-16-53.us-east-2.compute.amazonaws.com/"
@@ -98,19 +122,12 @@ export default function Home() {
                       View Project <FaArrowRight />
                     </Link>
                   </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-
-            
-          
-        </section>
-          
-          
+                </div>
+              </CardContent>
+            </Card>
+          </section>
         </main>
-
-        </div>
+      </div>
     </div>
   );
 }
