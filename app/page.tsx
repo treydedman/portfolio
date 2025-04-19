@@ -150,14 +150,20 @@ export default function Home() {
 
                   <p className="text-sm text-gray-900 dark:text-gray-300 leading-relaxed">
                     <span className="font-medium text-gray-900 dark:text-gray-100">
-                      Frontend Project
+                      TypeScript, HTML5, CSS3
                     </span>{" "}
                     <br />
-                    TypeScript, HTML5, CSS3
+                    <span className="text-gray-900 dark:text-gray-100">
+                      JavaScript DOM manipulation
+                    </span>{" "}
                     <br />
-                    JavaScript DOM manipulation
+                    <span className="text-gray-900 dark:text-gray-100 mr-8">
+                      LocalStorage for persisting user data
+                    </span>{" "}
                     <br />
-                    CoinCap REST API integration
+                    <span className="text-gray-900 dark:text-gray-100">
+                      CoinCap REST API integration
+                    </span>{" "}
                   </p>
                   <div className="mt-2">
                     <Link
