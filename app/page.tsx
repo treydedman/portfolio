@@ -80,6 +80,59 @@ export default function Home() {
             <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-3xl mx-auto">
               <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
                 <Image
+                  src="/snipster-og.png"
+                  alt="CyBear Lock"
+                  width={300}
+                  height={0}
+                  style={{ height: "auto" }}
+                  className="rounded-xl"
+                />
+
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                      Snipster
+                    </h3>
+                  </div>
+
+                  <p className="text-sm text-gray-900 dark:text-gray-300 leading-relaxed">
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Frontend:
+                    </span>{" "}
+                    Next.js, React, Tailwind CSS
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Backend:
+                    </span>{" "}
+                    Next.js serverless API, Node.js
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Auth:
+                    </span>{" "}
+                    Supabase Auth, GitHub OAuth
+                    <br />
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Database:
+                    </span>{" "}
+                    Supabase (PostgreSQL)
+                  </p>
+                  <div className="mt-2">
+                    <Link
+                      href="https://snipster-zeta.vercel.app/"
+                      className="flex items-center gap-2 text-blue-500 dark:text-blue-500 hover:font-bold mt-2"
+                      target="_blank" // optional: open in new tab
+                      rel="noopener noreferrer"
+                    >
+                      View Project <FaArrowRight />
+                    </Link>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white dark:bg-zinc-800 border border-gray-200 dark:border-black rounded-2xl shadow-md transition-transform duration-300 w-full max-w-3xl mx-auto">
+              <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
+                <Image
                   src="/cybear-og.png"
                   alt="CyBear Lock"
                   width={300}
