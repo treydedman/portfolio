@@ -28,7 +28,7 @@ export default function Home() {
             Trey Dedman
           </h1>
           <p className="text-2xl font-medium text-black dark:text-gray-200">
-            Web Developer — Cybersecurity
+            Web Developer - Cybersecurity
           </p>
           <p className="text-lg leading-relaxed text-black dark:text-gray-300">
             I enjoy turning ideas into clean, functional experiences. My
@@ -50,7 +50,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="rounded-lg bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 text-white font-semibold transition-transform hover:scale-110">
+              <Button className="rounded-lg bg-gradient-to-t from-gray-500 via-gray-400 to-zinc-500 text-white font-semibold transition-transform hover:scale-110 hover:cursor-pointer">
                 Resume
               </Button>
             </Link>
