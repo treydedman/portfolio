@@ -81,7 +81,7 @@ export default function Home() {
               <CardContent className="p-6 flex flex-col md:flex-row gap-24 items-center md:items-start">
                 <Image
                   src="/snipster-og.png"
-                  alt="CyBear Lock"
+                  alt="Snipster"
                   width={300}
                   height={0}
                   style={{ height: "auto" }}
@@ -120,7 +120,7 @@ export default function Home() {
                     <Link
                       href="https://snipster-zeta.vercel.app/"
                       className="flex items-center gap-2 text-blue-500 dark:text-blue-500 hover:font-bold mt-2"
-                      target="_blank" // optional: open in new tab
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       View Project <FaArrowRight />
@@ -171,9 +171,9 @@ export default function Home() {
                   </p>
                   <div className="mt-2">
                     <Link
-                      href="http://ec2-3-142-16-53.us-east-2.compute.amazonaws.com/"
+                      href="https://cybear-lock-v2.vercel.app/"
                       className="flex items-center gap-2 text-blue-950 dark:text-teal-300 hover:font-bold mt-2"
-                      target="_blank" // optional: open in new tab
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       View Project <FaArrowRight />
@@ -222,7 +222,7 @@ export default function Home() {
                     <Link
                       href="https://treydedman.github.io/Crypto-Watchlist-Project/"
                       className="flex items-center gap-2 text-blue-500  hover:font-bold mt-2"
-                      target="_blank" // optional: open in new tab
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       View Project <FaArrowRight />
