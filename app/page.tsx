@@ -1,8 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import logo from "../public/td-logo-gray.gif";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
@@ -130,7 +127,6 @@ const PROJECTS = [
     statusType: "dev",
     liveUrl: null,
     repoUrl: null,
-    isClient: true,
   },
   {
     name: "FieldHQ",
@@ -148,9 +144,8 @@ const PROJECTS = [
     ],
     status: "Live",
     statusType: "live",
-    liveUrl: "https://fieldhq.vercel.app/",
+    liveUrl: "https://fieldhqapp.vercel.app/",
     repoUrl: null,
-    isClient: true,
   },
   {
     name: "CyBear Lock v2",
@@ -169,7 +164,6 @@ const PROJECTS = [
     statusType: "live",
     liveUrl: "https://cybear-lock-v2.vercel.app/",
     repoUrl: "https://github.com/treydedman/cybear-lock-v2",
-    isClient: false,
   },
   {
     name: "Snipster",
@@ -188,7 +182,6 @@ const PROJECTS = [
     statusType: "live",
     liveUrl: "https://snipster-zeta.vercel.app/",
     repoUrl: "https://github.com/treydedman/snipster",
-    isClient: false,
   },
   {
     name: "Crypto Watchlist",
@@ -200,7 +193,6 @@ const PROJECTS = [
     statusType: "live",
     liveUrl: "https://treydedman.github.io/Crypto-Watchlist-Project/",
     repoUrl: "https://github.com/treydedman/Crypto-Watchlist-Project",
-    isClient: false,
   },
 ];
 
@@ -218,11 +210,11 @@ function NavLink({
   return (
     <a
       href={href}
-      className="group flex items-center gap-3 py-1 text-sm text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
+      className="group flex items-center gap-3 py-3 text-lg text-zinc-400 hover:text-zinc-100 transition-colors duration-200"
     >
       <span className="h-px w-6 bg-zinc-600 group-hover:w-10 group-hover:bg-zinc-100 transition-all duration-300" />
       <Icon className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
-      <span className="tracking-widest uppercase text-[11px] font-medium">
+      <span className="tracking-widest uppercase text-[13px] font-medium">
         {label}
       </span>
     </a>
@@ -232,9 +224,9 @@ function NavLink({
 function StatusBadge({ status, type }: { status: string; type: string }) {
   const styles =
     type === "live"
-      ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20"
+      ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
       : type === "dev"
-        ? "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20"
+        ? "bg-amber-500/10 text-amber-600 border-amber-500/20"
         : "bg-zinc-500/10 text-zinc-500 border-zinc-500/20";
   return (
     <span
@@ -253,16 +245,8 @@ function StatusBadge({ status, type }: { status: string; type: string }) {
 
 function StackBadge({ label }: { label: string }) {
   return (
-    <span className="inline-block text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-200/70 dark:bg-zinc-800 text-zinc-400 border border-zinc-300/50 dark:border-zinc-700/50">
+    <span className="inline-block text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-800 text-zinc-400 border border-zinc-700/50">
       {label}
-    </span>
-  );
-}
-
-function ClientBadge() {
-  return (
-    <span className="inline-block text-[10px] font-medium px-2 py-0.5 rounded-full bg-zinc-200 text-zinc-800 tracking-wider uppercase">
-      Client Work
     </span>
   );
 }
@@ -273,19 +257,16 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0c0c0f] text-zinc-100 transition-colors duration-300 selection:bg-zinc-700">
       <SunriseBackground />
-      <div className="relative z-10 mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="lg:flex lg:gap-16 lg:min-h-screen">
+      <div className="relative z-10 px-16 lg:px-24">
+        <div className="lg:flex lg:gap-50 lg:items-start">
           {/* ── LEFT PANEL (sticky on lg) ── */}
-          <aside
-            className="lg:w-80 lg:shrink-0 lg:sticky lg:top-0 lg:self-start lg:h-screen lg:flex lg:flex-col lg:justify-between py-12 lg:py-16"
-            style={{ position: "relative" }}
-          >
+          <aside className="lg:w-86 lg:shrink-0 lg:sticky lg:top-0 lg:self-start lg:h-screen lg:flex lg:flex-col lg:justify-between py-12 lg:py-16 relative">
             {/* Warm tint overlay driven by scroll */}
             <div
               style={{
                 position: "absolute",
                 inset: 0,
-                background: "linear-gradient(to top, #c45000, transparent 70%)",
+                background: "linear-gradient(to top, #7a2e00, transparent 50%)",
                 opacity: "var(--sidebar-warm-opacity, 0)" as unknown as number,
                 pointerEvents: "none",
                 zIndex: 0,
@@ -293,40 +274,38 @@ export default function Home() {
               }}
             />
             <div style={{ position: "relative", zIndex: 1 }}>
-              {/* Header row */}
-              <div className="flex items-center justify-between mb-10">
-                <div>
-                  <Image
-                    src={logo}
-                    alt="TD logo"
-                    className="w-full h-full max-h-6"
-                  />
-                </div>
-                <ThemeToggle />
-              </div>
-
               {/* Identity */}
-              <div className="space-y-2 mb-8">
-                <h1 className="text-3xl font-bold tracking-tight text-zinc-50">
+              <div className="mb-6">
+                <h1 className="text-4xl font-bold tracking-tight text-zinc-50 mb-3">
                   Trey Dedman
                 </h1>
-                <p className="text-base font-medium text-zinc-400">
-                  Full-Stack Developer
-                </p>
-                <p className="text-sm text-zinc-500">
-                  Cybersecurity background · Birmingham, AL
-                </p>
+                <div className="space-y-1">
+                  <p className="text-lg font-medium text-zinc-400">
+                    Full-Stack Developer{" "}
+                    <span className="text-zinc-600 mx-1">|</span> Cybersecurity
+                  </p>
+                  <p className="text-base text-zinc-500">
+                    Process Automation{" "}
+                    <span className="text-zinc-600 mx-1">|</span> Scalable
+                    Solutions
+                  </p>
+                  <p className="text-base text-zinc-500">
+                    Technical Operations{" "}
+                    <span className="text-zinc-600 mx-1">|</span> Team
+                    Leadership
+                  </p>
+                </div>
               </div>
 
               {/* Tagline */}
-              <p className="text-sm leading-relaxed text-zinc-400 mb-10 max-w-xs">
+              <p className="text-base leading-relaxed text-zinc-400 mb-6 ">
                 I turn operational problems into clean, scalable software. Six
-                years in security research taught me how to find the real issue
-                — now I build the solution.
+                years in cybersecurity taught me how to identify root causes;
+                now I build the solutions.
               </p>
 
               {/* Nav */}
-              <nav className="space-y-1 mb-10">
+              <nav className="space-y-0.5 mb-6 pt-3">
                 {NAV_LINKS.map(({ href, label, icon: Icon }) => (
                   <NavLink key={href} href={href} label={label} Icon={Icon} />
                 ))}
@@ -335,14 +314,14 @@ export default function Home() {
 
             {/* Bottom: socials + resume */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-5">
                 <Link
                   href="https://github.com/treydedman"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-zinc-400 hover:text-zinc-100 transition-colors"
                 >
-                  <FaGithub className="w-5 h-5" />
+                  <FaGithub className="w-6 h-6" />
                 </Link>
                 <Link
                   href="https://www.linkedin.com/in/treydedman/"
@@ -350,7 +329,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="text-zinc-400 hover:text-zinc-100 transition-colors"
                 >
-                  <FaLinkedin className="w-5 h-5" />
+                  <FaLinkedin className="w-6 h-6" />
                 </Link>
               </div>
               <Link
@@ -358,7 +337,10 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="rounded-md text-xs tracking-widest uppercase font-semibold px-4 py-2 bg-zinc-100 text-zinc-900 hover:bg-zinc-300 transition-colors">
+                <Button
+                  size="sm"
+                  className="rounded-md text-xs tracking-widest uppercase font-semibold px-3 py-1.5 bg-zinc-400 text-zinc-900 hover:bg-zinc-100 transition-colors"
+                >
                   Resume <FaArrowRight className="ml-1 w-3 h-3" />
                 </Button>
               </Link>
@@ -366,25 +348,18 @@ export default function Home() {
           </aside>
 
           {/* ── RIGHT PANEL (scrollable) ── */}
-          <main className="flex-1 py-12 lg:py-16 space-y-24">
+          <main className="flex-1 py-12 lg:py-16 space-y-32">
             {/* ABOUT */}
             <section id="about" className="scroll-mt-16">
               <SectionLabel>About</SectionLabel>
-              <div className="space-y-4 text-sm leading-relaxed text-zinc-300">
+              <div className="space-y-4 text-lg leading-relaxed text-zinc-300">
                 <p>
-                  I spent six years at PC Matic building macOS security
-                  infrastructure from scratch — designing classification
+                  I spent six years at PC Matic; most of it building macOS
+                  security infrastructure from scratch: designing classification
                   workflows, writing automation that processed 10,000+ files per
                   hour, and training the team that ran it. That experience
-                  shaped how I approach every problem: find the actual
-                  bottleneck, then build something that fixes it permanently.
-                </p>
-                <p>
-                  I've since shipped production applications for real clients: a
-                  CRM platform for small service businesses and a multi-tenant
-                  inventory system for a specialty retailer. I handle the full
-                  stack — architecture, implementation, deployment, and
-                  iteration.
+                  shaped how I approach every problem: find the core issue, then
+                  build something that actually solves it.
                 </p>
                 <p>
                   I'm a methodical problem-solver who takes ownership quietly
@@ -400,19 +375,19 @@ export default function Home() {
                 {EXPERIENCE.map((job) => (
                   <div
                     key={job.role}
-                    className="group relative pl-4 border-l border-zinc-800 hover:border-zinc-600 transition-colors duration-300"
+                    className="group relative   transition-colors duration-300"
                   >
                     <div className="mb-3">
                       <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                        <h3 className="text-sm font-semibold text-zinc-100">
+                        <h3 className="text-base font-semibold text-zinc-100">
                           {job.role}
                         </h3>
                         <span className="text-zinc-500 text-xs">·</span>
-                        <span className="text-xs text-zinc-400">
+                        <span className="text-base text-zinc-400">
                           {job.company}
                         </span>
                       </div>
-                      <p className="text-[11px] text-zinc-600 mt-0.5 font-mono">
+                      <p className="text-sm text-zinc-600 mt-0.5 font-mono">
                         {job.period}
                       </p>
                     </div>
@@ -447,7 +422,6 @@ export default function Home() {
                           <h3 className="text-sm font-semibold text-zinc-100">
                             {project.name}
                           </h3>
-                          {project.isClient && <ClientBadge />}
                         </div>
                         <p className="text-[11px] text-zinc-500 font-mono">
                           {project.tagline}
@@ -475,7 +449,7 @@ export default function Home() {
                           href={project.liveUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs font-medium text-zinc-100 hover:text-zinc-500 dark:hover:text-zinc-400 transition-colors group/link"
+                          className="flex items-center gap-1.5 text-xs font-medium text-zinc-100 hover:text-zinc-500 transition-colors group/link"
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
                           Live Demo
@@ -486,7 +460,7 @@ export default function Home() {
                           href={project.repoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
+                          className="flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
                         >
                           <FaGithub className="w-3 h-3" />
                           GitHub
@@ -538,7 +512,7 @@ export default function Home() {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-3 mb-6">
-      <h2 className="text-xs font-semibold tracking-widest uppercase text-zinc-500">
+      <h2 className="text-lg font-semibold tracking-widest uppercase text-zinc-500">
         {children}
       </h2>
       <div className="flex-1 h-px bg-zinc-800" />

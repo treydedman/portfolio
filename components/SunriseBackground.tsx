@@ -25,7 +25,7 @@ export function SunriseBackground() {
 
       document.documentElement.style.setProperty(
         "--sidebar-warm-opacity",
-        String(progress * 0.07),
+        String(progress * 0.01),
       );
     };
 
