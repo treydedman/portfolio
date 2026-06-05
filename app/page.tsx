@@ -132,7 +132,7 @@ const PROJECTS = [
     name: "FieldHQ",
     tagline: "CRM Platform",
     description:
-      "Full-stack business operations platform for small service businesses — invoicing, scheduling, client management, and activity tracking. Refined through beta user collaboration to match real-world operational workflows.",
+      "Full-stack business operations platform for small service businesses: invoicing, scheduling, client management, and activity tracking. Refined through beta user collaboration to match real-world operational workflows.",
     stack: [
       "Next.js",
       "React",
@@ -151,7 +151,7 @@ const PROJECTS = [
     name: "CyBear Lock v2",
     tagline: "Password Manager",
     description:
-      "Full architectural rebuild of the original CyBear Lock — migrated from React/Express/AWS to Next.js on Vercel and Supabase. AES encryption via CryptoJS with Argon2 password hashing and JWT session management.",
+      "Full architectural rebuild of the original CyBear Lock, migrated from React/Express/AWS to Next.js on Vercel and Supabase. AES encryption via CryptoJS with Argon2 password hashing and JWT session management.",
     stack: [
       "Next.js",
       "React",
