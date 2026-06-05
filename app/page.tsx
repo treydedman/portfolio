@@ -260,7 +260,7 @@ export default function Home() {
       <div className="relative z-10 px-16 lg:px-24">
         <div className="lg:flex lg:gap-50 lg:items-start">
           {/* ── LEFT PANEL (sticky on lg) ── */}
-          <aside className="lg:w-86 lg:shrink-0 lg:sticky lg:top-0 lg:self-start lg:h-screen lg:flex lg:flex-col lg:justify-between py-12 lg:py-16 relative">
+          <aside className="lg:w-84 lg:shrink-0 lg:sticky lg:top-0 lg:self-start lg:h-screen lg:flex lg:flex-col lg:justify-between py-12 lg:py-16 relative">
             {/* Warm tint overlay driven by scroll */}
             <div
               style={{
@@ -275,7 +275,7 @@ export default function Home() {
             />
             <div style={{ position: "relative", zIndex: 1 }}>
               {/* Identity */}
-              <div className="mb-6">
+              <div className="mb-5">
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-50 mb-3">
                   Trey Dedman
                 </h1>
@@ -289,19 +289,19 @@ export default function Home() {
                     <span className="text-zinc-600 mx-1">|</span> Scalable
                     Solutions
                   </p>
-                  <p className="text-base text-zinc-500">
-                    Technical Operations{" "}
-                    <span className="text-zinc-600 mx-1">|</span> Team
-                    Leadership
-                  </p>
                 </div>
               </div>
 
               {/* Tagline */}
-              <p className="text-base leading-relaxed text-zinc-400 mb-6 ">
+              <p className="text-base leading-relaxed text-zinc-400 mb-5 ">
                 I turn operational problems into clean, scalable software. Six
                 years in cybersecurity taught me how to identify root causes;
                 now I build the solutions.
+              </p>
+
+              <p className="text-sm text-zinc-500 mb-4">
+                Available for full-time, part-time, and select freelance
+                opportunities
               </p>
 
               {/* Nav */}
