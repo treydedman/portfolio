@@ -129,6 +129,25 @@ const PROJECTS = [
     repoUrl: null,
   },
   {
+    name: "Nasty Nelsons Gear",
+    tagline: "Pickleball Brand & Content Platform",
+    description:
+      "Full-stack brand site and headless CMS for a pickleball gear and content brand. Custom blog with categories/tags, affiliate links hub with discount codes, partnership inquiries, and a role-based admin dashboard. It was built from scratch as a reusable CMS starter kit.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Supabase",
+      "Tailwind CSS",
+      "Tiptap",
+    ],
+    status: "Live",
+    statusType: "live",
+    liveUrl: "https://nastynelsonsgear.com",
+    repoUrl: null,
+  },
+  {
     name: "FieldHQ",
     tagline: "CRM Platform",
     description:
