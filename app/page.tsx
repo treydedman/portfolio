@@ -93,7 +93,7 @@ const EXPERIENCE = [
       "Automated routine file classifications via Python scripts, increasing throughput to 10,000+ files per hour.",
       "Revamped the digital certificate allowlist a full month ahead of a four-month timeline.",
       "Eliminated redundant processes, reducing company resource consumption by 30%.",
-      "Co-authored SOPs from scratch and trained all six researchers on macOS workflows.",
+      "Crafted SOPs from scratch and trained all six researchers on macOS workflows.",
     ],
   },
   {
